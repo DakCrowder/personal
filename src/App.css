@@ -1,28 +1,59 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  height: 60px;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: #f890e7;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 5px;
+}
+
+.Card {
+  padding: 20px 20px;
+}
+
+.Card-Header {
+  display: flex;
+  padding: 10px;
+}
+
+.Card-Content {
+  padding: 0 10px;
+}
+
+.Header {
+  font-size: 2em;
+  background-color: #22ABC7;
   color: white;
+  padding: 10px;
+  margin: 0;
 }
 
-.App-title {
-  font-size: 1.5em;
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.App-intro {
-  font-size: large;
-}
+/*
+ED145A red
+F090C0 pink
+#f890e7 hot pink
+22ABC7
+18D8F0
+18C0F0
+*/
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+/*
+#0bd3d3 teal
+#f890e7 hot pink
+ */
+
+/*
+f94fa4
+ */
