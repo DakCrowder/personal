@@ -4,8 +4,8 @@ import styled from 'styled-components';
 export const Title = styled.h1`
   font-size: 3em;
   text-align: center;
-  color: #000000;
-  font-family: 'Ubuntu', sans-serif;
+  color: #FFFFFF;
+  font-family: 'Comfortaa', sans-serif;
   margin: 0;
   
   @media (max-width: 620px) {

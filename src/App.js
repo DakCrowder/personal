@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Body } from './Components/Body'
 import { Title } from './Components/Title'
+import { CardContainer } from './Components/CardContainer';
+import { Card } from './Components/Card'
+import { CardContent } from './Components/CardContent';
+import { CardTitle } from './Components/CardTitle'
+
+import image from './assets/images/gukhwa-jang-66917-unsplash.jpg'
 
 const cities = {
   London: '3/29',
@@ -40,28 +47,52 @@ class App extends Component {
   return (
     <div className="App">
 			<header className="App-header">
-				<Title>Dakota Crowder</Title>
+				<Title>dakota crowder</Title>
 			</header>
-      <div className="Card">
-        <div className="Card-Header">
-          <p className="Header">
-            Itinerary
-          </p>
+      <Body>
+        <div className="Card">
+          <div className="Card-Header">
+            <p className="Header">
+              Itinerary
+            </p>
+          </div>
+          <div className="Card-Content">
+            <p>
+              Dates and locations very much subject to change.  Will be posting to this (soon to be) website w/ photos and updates throughout the trip.
+            </p>
+            <ul>
+              {
+                Object.keys(cities).map(key => {
+                    return <li key={ key }>{key} - {cities[key]}</li>;
+                  }
+                )
+              }
+            </ul>
+          </div>
         </div>
-        <div className="Card-Content">
-          <p>
-            Dates and locations very much subject to change.  Will be posting to this (soon to be) website w/ photos and updates throughout the trip.
-          </p>
-          <ul>
-            {
-              Object.keys(cities).map(key => {
-                return <li key={ key }>{key} - {cities[key]}</li>;
-                }
-              )
-            }
-          </ul>
-        </div>
-      </div>
+        <CardContainer>
+          <Card>
+            <CardContent left img={image}>
+              <div>
+                <CardTitle primary>Venice</CardTitle>
+              </div>
+              <div>
+                <CardTitle secondary>Italy</CardTitle>
+              </div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent right img={image}>
+              <div style={{paddingTop: 20, paddingLeft: 20}}>
+                <CardTitle primary>Venice</CardTitle>
+              </div>
+              <div style={{paddingLeft: 20}}>
+                <CardTitle secondary>Italy</CardTitle>
+              </div>
+            </CardContent>
+          </Card>
+        </CardContainer>
+      </Body>
     </div>
   );
   }
