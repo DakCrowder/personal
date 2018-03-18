@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
-// Create a Title component that'll render an <h1> tag with some styles
 export const CardTitle = styled.span`
-  height: 60px;
+  height: ${props => props.primary ? '60px' : '30px'};
   color: #FFFFFF;
   position: relative;
-  background-color: ${props => props.primary ? 'red' : 'blue'};
+  background-color: ${props => props.primary ? '#F090C0' : '#22ABC7'};
   font-family: 'Comfortaa', sans-serif;
-  font-size: 3rem;
-  padding: 20px;
+  font-size: ${props => props.primary ? '3rem' : '1.5rem'};
+  padding: 10px;
+  top: ${props => props.primary ? '40px' : '60px'};
+  left: 20px;
   
   @media (max-width: 1024px) {
     margin: 0;
