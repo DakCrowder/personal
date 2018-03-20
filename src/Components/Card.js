@@ -11,6 +11,7 @@ class Card extends Component {
     image: PropTypes.string.isRequired,
     primaryTitle: PropTypes.string.isRequired,
     secondaryTitle: PropTypes.string.isRequired,
+    modalContent: PropTypes.node.isRequired,
   }
 
   constructor(props) {
@@ -41,6 +42,7 @@ class Card extends Component {
           modalClose={this.handleModalClose}
           primaryTitle={this.props.primaryTitle}
           secondaryTitle={this.props.secondaryTitle}
+          modalContent={this.props.modalContent}
         />
       </div>
     )

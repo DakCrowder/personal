@@ -10,10 +10,12 @@ class CardModal extends Component {
     image: PropTypes.string.isRequired,
     primaryTitle: PropTypes.string,
     secondaryTitle: PropTypes.string,
-    modalClose: PropTypes.func.isRequired
+    modalClose: PropTypes.func.isRequired,
+    modalContent: PropTypes.node.isRequired,
   }
 
   render() {
+    const ModalContent = this.props.modalContent
     return (
       <ReactModal
         isOpen={this.props.isOpen}
@@ -26,6 +28,9 @@ class CardModal extends Component {
             <CardTitle primary>{this.props.primaryTitle}</CardTitle>
             <CardTitle secondary>{this.props.secondaryTitle}</CardTitle>
           </div>
+        </div>
+        <div style={{padding: '40px', width: '800px'}}>
+          <ModalContent/>
         </div>
         <button onClick={this.props.modalClose}>Close Modal</button>
       </ReactModal>
