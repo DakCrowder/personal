@@ -13,6 +13,10 @@ import Page from './Components/Page'
 //TODO Should render <Body> / some generic abstraction around Destinations (higher order component?)
 //TODO move home / destinations / about to containers or 'pages'
 //TODO group styling / smaller components into an all module
+//TODO on hover states
+//TODO animation for tab selection
+//TODO animation for card click
+//TODO sticky header
 
 class App extends Component {
 
