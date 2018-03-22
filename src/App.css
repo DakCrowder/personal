@@ -2,30 +2,15 @@
   font-family: 'Lato', sans-serif;
 }
 
-.Card {
-  padding: 20px 20px;
+.ReactModal__Overlay
+{
+  overflow: auto;
 }
 
-.Card-Header {
-  display: flex;
-  padding: 10px;
-}
-
-.Card-Content {
-  padding: 0 10px;
-}
-
-.Header {
-  font-size: 2em;
-  background-color: #22ABC7;
-  color: white;
-  padding: 10px;
-  margin: 0;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
+.ReactModal__Body--open
+{
+  height: 100%;
+  overflow: hidden;
 }
 
 /*

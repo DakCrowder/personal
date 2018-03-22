@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const CardContent = styled.div`
-  margin-left: ${props => props.left ? '0' : '30px'};
-  margin-right: ${props => props.left ? '30px' : '0'};
+  margin-left: ${props => props.left ? '0' : '15px'};
+  margin-right: ${props => props.left ? '15px' : '0'};
   padding: 40px;
   height: 100%;
   

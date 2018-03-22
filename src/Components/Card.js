@@ -7,11 +7,18 @@ import CardModal from './CardModal'
 
 class Card extends Component {
 
-  static defaultProps = {
+  static propTypes = {
     image: PropTypes.string.isRequired,
     primaryTitle: PropTypes.string.isRequired,
     secondaryTitle: PropTypes.string.isRequired,
     modalContent: PropTypes.node.isRequired,
+    blackClose: PropTypes.bool,
+    left: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    blackClose: false,
+    left: false,
   }
 
   constructor(props) {
@@ -32,7 +39,7 @@ class Card extends Component {
   render() {
     return (
       <div className={this.props.className}>
-        <CardContent left img={this.props.image} onClick={this.handleModalOpen}>
+        <CardContent left={this.props.left} img={this.props.image} onClick={this.handleModalOpen}>
           <CardTitle primary>{this.props.primaryTitle}</CardTitle>
           <CardTitle secondary>{this.props.secondaryTitle}</CardTitle>
         </CardContent>
@@ -43,6 +50,7 @@ class Card extends Component {
           primaryTitle={this.props.primaryTitle}
           secondaryTitle={this.props.secondaryTitle}
           modalContent={this.props.modalContent}
+          blackClose={this.props.blackClose}
         />
       </div>
     )
