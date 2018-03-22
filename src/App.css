@@ -13,6 +13,32 @@
   overflow: hidden;
 }
 
+.ReactModal__Content {
+  opacity: 0;
+}
+
+.ReactModal__Content--after-open {
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;;
+}
+
+.ReactModal__Content--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Overlay {
+  transition: opacity 200ms ease-in-out;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
 /*
 ED145A red
 F090C0 pink

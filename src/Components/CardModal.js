@@ -25,6 +25,7 @@ class CardModal extends Component {
         isOpen={this.props.isOpen}
         contentLabel={this.props.primaryTitle}
         style={{ content: {top: 0, right: 0, bottom: 0, left: 0, borderRadius: 0, padding: 0, border: 0} }}
+        closeTimeoutMS={200}
       >
         <div style={{height: '400px', width: '100%', backgroundImage: `url(${this.props.image})`, backgroundSize: 'cover', backgroundPosition: 'center',
         display: 'flex', justifyContent: 'center'}}>

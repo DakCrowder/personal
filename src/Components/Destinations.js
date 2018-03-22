@@ -36,13 +36,13 @@ class Destinations extends Component {
 
   render() {
     return (
-      <div className="Card">
-        <div className="Card-Header">
-          <p className="Header">
+      <div>
+        <div>
+          <p>
             Itinerary
           </p>
         </div>
-        <div className="Card-Content">
+        <div>
           <p>
             Dates and locations very much subject to change.  Will be posting to this (soon to be) website w/ photos and updates throughout the trip.
           </p>
