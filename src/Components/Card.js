@@ -61,6 +61,7 @@ export default styled(Card)`
   display: inline-block;
   width: 50%;
   height: 400px;
+  overflow: hidden;
   
   @media (max-width: 1024px) {
     width: 100%;

@@ -8,7 +8,14 @@ export const CardContent = styled.div`
   
   background-image: ${props => `url(${props.img})`};
   background-size: cover;
-  background-position: center; 
+  background-position: center;
+  
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    //transform: scale(1.1);
+    //transition: all .5s;
+  }
   
   @media (max-width: 1024px) {
     margin: 0;
