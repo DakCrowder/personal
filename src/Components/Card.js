@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { CardContent } from './CardContent';
 import CardTitle from './CardTitle';
 import CardModal from './CardModal'
+import CardContentContainer from './CardContentContainer'
 
 class Card extends Component {
 
@@ -39,10 +40,12 @@ class Card extends Component {
   render() {
     return (
       <div className={this.props.className}>
-        <CardContent left={this.props.left} img={this.props.image} onClick={this.handleModalOpen}>
-          <CardTitle primary>{this.props.primaryTitle}</CardTitle>
-          <CardTitle secondary>{this.props.secondaryTitle}</CardTitle>
-        </CardContent>
+        <CardContentContainer left={this.props.left}>
+          <CardContent img={this.props.image} onClick={this.handleModalOpen}>
+            <CardTitle primary>{this.props.primaryTitle}</CardTitle>
+            <CardTitle secondary>{this.props.secondaryTitle}</CardTitle>
+          </CardContent>
+        </CardContentContainer>
         <CardModal
           isOpen={this.state.showModal}
           image={this.props.image}
