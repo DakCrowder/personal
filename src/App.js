@@ -9,14 +9,18 @@ import Home from './Components/Home'
 import Destinations from './Components/Destinations'
 import About from './Components/About'
 import Page from './Components/Page'
+import styled, { ThemeProvider } from 'styled-components';
 
-//TODO Should render <Body> / some generic abstraction around Destinations (higher order component?)
-//TODO move home / destinations / about to containers or 'pages'
 //TODO group styling / smaller components into an all module
-//TODO on hover states
 //TODO animation for tab selection
 //TODO animation for card click
 //TODO sticky header
+
+//TODO color themes for flags of each nation (THEMES directory ???)
+const theme = {
+  primary: '#22ABC7',
+  secondary: '#f890e7'
+};
 
 class App extends Component {
 
@@ -35,33 +39,35 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Header>
-          <Title>dakota crowder</Title>
-        </Header>
-        <NavBar>
-          <NavItem selected={this.homeSelected()} onClick={() => this.handleNavClick('home')}>
-            Home
-          </NavItem>
-          <NavItem selected={this.destinationsSelected()} onClick={() => this.handleNavClick('dest')}>
-            Destinations
-          </NavItem>
-          <NavItem selected={this.aboutSelected()} onClick={() => this.handleNavClick('about')}>
-            About
-          </NavItem>
-        </NavBar>
-        <Body>
-          <Page visible={this.homeSelected()}>
-            <Home/>
-          </Page>
-          <Page visible={this.destinationsSelected()}>
-            <Destinations/>
-          </Page>
-          <Page visible={this.aboutSelected()}>
-            <About/>
-          </Page>
-        </Body>
-      </div>
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          <Header>
+            <Title>dakota crowder</Title>
+          </Header>
+          <NavBar>
+            <NavItem selected={this.homeSelected()} onClick={() => this.handleNavClick('home')}>
+              Home
+            </NavItem>
+            <NavItem selected={this.destinationsSelected()} onClick={() => this.handleNavClick('dest')}>
+              Destinations
+            </NavItem>
+            <NavItem selected={this.aboutSelected()} onClick={() => this.handleNavClick('about')}>
+              About
+            </NavItem>
+          </NavBar>
+          <Body>
+            <Page visible={this.homeSelected()}>
+              <Home/>
+            </Page>
+            <Page visible={this.destinationsSelected()}>
+              <Destinations/>
+            </Page>
+            <Page visible={this.aboutSelected()}>
+              <About/>
+            </Page>
+          </Body>
+        </div>
+      </ThemeProvider>
     );
   }
 }

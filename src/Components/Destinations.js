@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+import CardTitle from './CardTitle'
 
 const cities = {
   London: '3/29',
@@ -36,28 +38,34 @@ class Destinations extends Component {
 
   render() {
     return (
-      <div>
+      <div className={this.props.className}>
         <div>
-          <p>
-            Itinerary
-          </p>
-        </div>
-        <div>
-          <p>
-            Dates and locations very much subject to change.  Will be posting to this (soon to be) website w/ photos and updates throughout the trip.
-          </p>
-          <ul>
-            {
-              Object.keys(cities).map(key => {
-                  return <li key={ key }>{key} - {cities[key]}</li>;
-                }
-              )
-            }
-          </ul>
+          <div>
+            <CardTitle secondary>
+              Itinerary
+            </CardTitle>
+          </div>
+          <div>
+            <p>
+              Dates and locations very much subject to change.
+            </p>
+            <ul style={{listStyleType: 'none', padding: 0}}>
+              {
+                Object.keys(cities).map(key => {
+                    return <li key={ key } style={{paddingBottom: 5, fontWeight: 'bold'}}>{key} - {cities[key]}</li>;
+                  }
+                )
+              }
+            </ul>
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default Destinations;
+export default styled(Destinations)`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`;

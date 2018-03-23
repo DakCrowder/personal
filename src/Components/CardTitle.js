@@ -16,7 +16,7 @@ export default styled(CardTitle)`
   line-height: ${props => props.primary ? '60px' : '30px'};
   color: #FFFFFF;
   position: relative;
-  background-color: ${props => props.primary ? '#F090C0' : '#22ABC7'};
+  background-color: ${props => props.primary ? props.theme.primary : props.theme.secondary};
   font-family: 'Comfortaa', sans-serif;
   font-size: ${props => props.primary ? '3rem' : '1.5rem'};
   padding: 10px;
