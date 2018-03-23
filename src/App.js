@@ -15,7 +15,6 @@ import Sticky from 'react-stickynode';
 //TODO group styling / smaller components into an all module
 //TODO animation for tab selection
 //TODO animation for card click
-//TODO sticky header
 
 //TODO color themes for flags of each nation (THEMES directory ???)
 const theme = {

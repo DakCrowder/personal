@@ -9,8 +9,8 @@ export const NavItem = styled.span`
   border-width: 0;
   border-bottom-width: 2px;
   
-  @media (max-width: 1024px) {
-    
+  @media (max-width: 420px) {
+    font-size 1rem;
   }
   
   &:hover {
