@@ -9,7 +9,8 @@ import Home from './Components/Home'
 import Destinations from './Components/Destinations'
 import About from './Components/About'
 import Page from './Components/Page'
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
+import Sticky from 'react-stickynode';
 
 //TODO group styling / smaller components into an all module
 //TODO animation for tab selection
@@ -44,17 +45,19 @@ class App extends Component {
           <Header>
             <Title>dakota crowder</Title>
           </Header>
-          <NavBar>
-            <NavItem selected={this.homeSelected()} onClick={() => this.handleNavClick('home')}>
-              Home
-            </NavItem>
-            <NavItem selected={this.destinationsSelected()} onClick={() => this.handleNavClick('dest')}>
-              Destinations
-            </NavItem>
-            <NavItem selected={this.aboutSelected()} onClick={() => this.handleNavClick('about')}>
-              About
-            </NavItem>
-          </NavBar>
+          <Sticky enabled={true} innerZ={10}>
+            <NavBar>
+              <NavItem selected={this.homeSelected()} onClick={() => this.handleNavClick('home')}>
+                Home
+              </NavItem>
+              <NavItem selected={this.destinationsSelected()} onClick={() => this.handleNavClick('dest')}>
+                Destinations
+              </NavItem>
+              <NavItem selected={this.aboutSelected()} onClick={() => this.handleNavClick('about')}>
+                About
+              </NavItem>
+            </NavBar>
+          </Sticky>
           <Body>
             <Page visible={this.homeSelected()}>
               <Home/>

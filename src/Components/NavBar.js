@@ -6,6 +6,7 @@ export const NavBar = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: sticky;
   
   @media (max-width: 1024px) {
     margin: 0;

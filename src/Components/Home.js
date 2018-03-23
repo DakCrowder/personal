@@ -11,6 +11,13 @@ import London from './ModalContent/London'
 
 class Home extends Component {
 
+  componentWillMount() {
+    const top = document.documentElement.scrollTop || document.body.scrollTop;
+    if (top > 110) {
+      window.scrollTo(0,110);
+    }
+  }
+
   render() {
     return (
       <div>

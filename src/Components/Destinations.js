@@ -36,6 +36,13 @@ const cities = {
 
 class Destinations extends Component {
 
+  componentWillMount() {
+    const top = document.documentElement.scrollTop || document.body.scrollTop;
+    if (top > 110) {
+      window.scrollTo(0,110);
+    }
+  }
+
   render() {
     return (
       <div className={this.props.className}>
