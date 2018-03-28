@@ -12,7 +12,7 @@ class CloseButton extends Component {
   render() {
     return (
       <button onClick={this.props.onClick} className={this.props.className}>
-        Close <img src={xSvg} onClick={this.props.modalClose} style={{paddingLeft: '5px', paddingTop: '2px', height: '28px'}}/>
+        Close <img src={xSvg} onClick={this.props.modalClose} style={{paddingLeft: '5px', paddingTop: '2px', height: '28px'}} alt=''/>
       </button>
     )
   }

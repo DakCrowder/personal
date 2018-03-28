@@ -30,8 +30,8 @@ class CardModal extends Component {
         <div style={{height: '400px', width: '100%', backgroundImage: `url(${this.props.image})`, backgroundSize: 'cover', backgroundPosition: 'center',
         display: 'flex', justifyContent: 'center'}}>
           <div style={{padding: '40px', width: '800px', position: 'relative'}}>
-            <CardTitle primary>{this.props.primaryTitle}</CardTitle>
-            <CardTitle secondary>{this.props.secondaryTitle}</CardTitle>
+            {this.props.primaryTitle ? <CardTitle primary>{this.props.primaryTitle}</CardTitle> : null}
+            {this.props.secondaryTitle ? <CardTitle secondary>{this.props.secondaryTitle}</CardTitle> : null}
             <CloseIcon onClick={this.props.modalClose} blackClose={this.props.blackClose}/>
           </div>
         </div>

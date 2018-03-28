@@ -6,9 +6,20 @@ class About extends Component {
   render() {
     return (
       <div className={this.props.className}>
-        <p style={{width: '600px'}}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in tortor vitae ipsum aliquet rhoncus. Mauris diam neque, convallis viverra finibus id, rhoncus non turpis. Morbi sit amet lacus dui. Mauris porta metus vitae nibh finibus consectetur. Ut faucibus mauris et dolor viverra auctor. Nulla gravida nisl imperdiet diam ultrices, vitae tristique velit porttitor. Donec mattis convallis accumsan. Phasellus id metus ornare, tempor felis at, convallis nulla.
-        </p>
+        <div style={{width: '600px'}}>
+          <p>
+            My name is Dakota Crowder, and I'm currently embarking on a ~4 month journey around the world.
+            Originally from the blossoming suburb of Cary, North Carolina and a graduate of the University of North Carolina at Chapel Hill,
+            I love all things NC and will greatly miss the area while gone.
+            I may not know exactly where I will be going, when I will be going there, or what I'll be doing once there... but rest assured,
+            all my travels shall be documented here.
+          </p>
+          <p>
+            Speaking of 'here', this website will most likely be an ever-changing developmental experiment that
+            evolves as need be.  Currently, the site is simply a static React app sitting in a firebase bucket.  Over time
+            I'd like to implement some form of firebase storage and some requests for the ability to 'comment' on posts have been noted.
+          </p>
+        </div>
       </div>
     );
   }

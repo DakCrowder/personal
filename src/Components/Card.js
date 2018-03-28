@@ -42,16 +42,16 @@ class Card extends Component {
       <div className={this.props.className}>
         <CardContentContainer left={this.props.left}>
           <CardContent img={this.props.image} onClick={this.handleModalOpen}>
-            <CardTitle primary>{this.props.primaryTitle}</CardTitle>
-            <CardTitle secondary>{this.props.secondaryTitle}</CardTitle>
+            {this.props.primaryTitle ? <CardTitle primary>{this.props.primaryTitle}</CardTitle> : null}
+            {this.props.secondaryTitle ? <CardTitle secondary>{this.props.secondaryTitle}</CardTitle> : null}
           </CardContent>
         </CardContentContainer>
         <CardModal
           isOpen={this.state.showModal}
           image={this.props.image}
           modalClose={this.handleModalClose}
-          primaryTitle={this.props.primaryTitle}
-          secondaryTitle={this.props.secondaryTitle}
+          primaryTitle={this.props.primaryTitle ? this.props.primaryTitle : null}
+          secondaryTitle={this.props.secondaryTitle ? this.props.secondaryTitle : null}
           modalContent={this.props.modalContent}
           blackClose={this.props.blackClose}
         />
