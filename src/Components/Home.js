@@ -3,14 +3,15 @@ import { CardContainer } from './CardContainer';
 import Card from './Card';
 
 // TODO image object stored / exported elsewhere
-import image from '../assets/images/bag_on_floor.jpg'
-import image2 from '../assets/images/heidi-sandstrom-187259-unsplash.jpg'
+import bag from '../assets/images/bag_on_floor.jpg'
+import bridge from '../assets/images/london/bridge.jpg'
 
 import Departure from './ModalContent/Departure'
 import London from './ModalContent/London'
 
 //TODO title text cutoff on smaller screens
 //TODO title and close icon in modal overlap on smaller screens
+//TODO multi line image subtext extends too close to other text
 
 class Home extends Component {
 
@@ -25,13 +26,9 @@ class Home extends Component {
     return (
       <div>
         <CardContainer>
-          {/*<Card image={image2} primaryTitle={'London'} secondaryTitle={'England'} modalContent={London} blackClose left/>*/}
-          <Card image={image} primaryTitle={'Departure'} modalContent={Departure} />
+          <Card image={bridge} primaryTitle={'London'} secondaryTitle={'England'} modalContent={London} blackClose left/>
+          <Card image={bag} primaryTitle={'Departure'} modalContent={Departure} />
         </CardContainer>
-        {/*<CardContainer>*/}
-          {/*<Card image={image} primaryTitle={'Venice'} secondaryTitle={'Italy'} modalContent={Venice} left/>*/}
-          {/*<Card image={image2} primaryTitle={'London'} secondaryTitle={'England'} modalContent={London} blackClose />*/}
-        {/*</CardContainer>*/}
       </div>
     )
   }
