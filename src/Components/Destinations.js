@@ -70,6 +70,7 @@ class Destinations extends Component {
           </CardTitle>
           <div>
             <ol>
+              <li>Amsterdam</li>
               <li>London</li>
             </ol>
           </div>
