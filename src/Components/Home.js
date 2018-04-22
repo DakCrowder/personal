@@ -16,10 +16,10 @@ import Brussels from './ModalContent/Brussels'
 import Paris from './ModalContent/Paris'
 import Lyon from './ModalContent/Lyon'
 
-//TODO title text cutoff on smaller screens
-//TODO title and close icon in modal overlap on smaller screens
 //TODO object holding card metadata/props and an iterator that places them
 //TODO move old photos into firebase storage
+//TODO image loading state
+//TODO better mobile styling in general (mobile header still iffy)
 
 class Home extends Component {
 

@@ -12,7 +12,6 @@ class CardTitle extends Component {
 }
 
 export default styled(CardTitle)`
-  height: ${props => props.primary ? '60px' : '30px'};
   line-height: ${props => props.primary ? '60px' : '30px'};
   color: #FFFFFF;
   position: relative;
@@ -25,5 +24,10 @@ export default styled(CardTitle)`
   
   @media (max-width: 1024px) {
     margin: 0;
+  }
+  
+  @media (max-width: 620px) {
+    font-size: ${props => props.primary ? '2rem' : '1rem'};
+    line-height: ${props => props.primary ? '30px' : '15px'};
   }
 `;
