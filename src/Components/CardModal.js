@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import CardTitle from './CardTitle'
 import CloseIcon from './CloseIcon'
 import CloseButton from './CloseButton'
+import ModalHeaderContent from './ModalHeaderContent'
 
 class CardModal extends Component {
 
@@ -29,11 +30,11 @@ class CardModal extends Component {
       >
         <div style={{height: '400px', width: '100%', backgroundImage: `url(${this.props.image})`, backgroundSize: 'cover', backgroundPosition: 'center',
         display: 'flex', justifyContent: 'center'}}>
-          <div style={{padding: '40px', width: '800px', position: 'relative'}}>
+          <ModalHeaderContent>
             {this.props.primaryTitle ? <CardTitle primary>{this.props.primaryTitle}</CardTitle> : null}
             {this.props.secondaryTitle ? <CardTitle secondary>{this.props.secondaryTitle}</CardTitle> : null}
             <CloseIcon onClick={this.props.modalClose} blackClose={this.props.blackClose}/>
-          </div>
+          </ModalHeaderContent>
         </div>
         <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
           <div style={{padding: '40px', width: '800px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>

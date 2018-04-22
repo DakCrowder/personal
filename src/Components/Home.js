@@ -18,9 +18,7 @@ import Lyon from './ModalContent/Lyon'
 
 //TODO title text cutoff on smaller screens
 //TODO title and close icon in modal overlap on smaller screens
-//TODO multi line image subtext extends too close to other text
 //TODO object holding card metadata/props and an iterator that places them
-//TODO photo component w/ loading state and sharing GET code and styling (???)
 //TODO move old photos into firebase storage
 
 class Home extends Component {

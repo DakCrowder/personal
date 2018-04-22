@@ -6,8 +6,8 @@ export const Header = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.theme.primary};;
-  border-color: ${props => props.theme.secondary};;
+  background-color: ${props => props.theme.primary};
+  border-color: ${props => props.theme.secondary};
   border-style: solid;
   border-width: 0;
   border-bottom-width: 5px;

@@ -33,7 +33,7 @@ export default class Image extends Component {
   renderCaption() {
     if (this.props.caption) {
       return (
-        <p style={{width: '100%', textAlign: 'center', fontStyle: 'italic', height: '30px', lineHeight: '30px', padding: '5px', margin: 0}}>
+        <p style={{width: '100%', textAlign: 'center', fontStyle: 'italic', lineHeight: '30px', padding: '5px', margin: 0}}>
           { this.props.caption }
         </p>
       )
