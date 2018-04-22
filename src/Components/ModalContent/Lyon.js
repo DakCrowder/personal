@@ -1,37 +1,7 @@
 import React, { Component } from 'react';
-
-import * as firebase from 'firebase';
-
-// TODO need to initialize this at a higher level...
-const config = {
-  apiKey: "AIzaSyC6yHsxnbJB8O6qz8E1A6UDlqBYyDsjDMo",
-  authDomain: "dakotacrowder-af109.firebaseapp.com",
-  databaseURL: "https://dakotacrowder-af109.firebaseio.com",
-  projectId: "dakotacrowder-af109",
-  storageBucket: "dakotacrowder-af109.appspot.com",
-  messagingSenderId: "134597628241"
-}
-firebase.initializeApp(config);
-
-const storage = firebase.storage().ref()
+import Image from '../Image'
 
 class Departure extends Component {
-
-  constructor () {
-    super()
-    this.state = {
-      pie: '',
-    }
-    this.getImage('pie')
-  }
-
-  //TODO getImage to image component and pass city name (lyon)
-  getImage (image) {
-    storage.child(`images/lyon/${image}.jpg`).getDownloadURL().then((url) => {
-      this.state[image] = url
-      this.setState(this.state)
-    })
-  }
 
   render() {
     return (
@@ -39,13 +9,11 @@ class Departure extends Component {
         <p>
           foobar baz bang
         </p>
-        <img src={this.state.pie} alt={''} style={{maxWidth: '100%', height: 'auto'}}/>
-        <p style={{width: '100%', textAlign: 'center', fontStyle: 'italic', height: '30px', lineHeight: '30px', padding: '5px', margin: 0}}>
-          Everything I'll be bringing along
-        </p>
+        <Image imageName={'pie'} caption={'wee'} bucket={'lyon'}/>
         <p>
           wowowo
         </p>
+        <Image imageName={'alley'} caption={'woo'} bucket={'lyon'}/>
       </div>
     )
   }

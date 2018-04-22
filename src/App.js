@@ -11,6 +11,18 @@ import About from './Components/About'
 import Page from './Components/Page'
 import { ThemeProvider } from 'styled-components';
 import Sticky from 'react-stickynode';
+import * as firebase from 'firebase';
+
+// Firebase app initialization so we can use storage
+const config = {
+  apiKey: "AIzaSyC6yHsxnbJB8O6qz8E1A6UDlqBYyDsjDMo",
+  authDomain: "dakotacrowder-af109.firebaseapp.com",
+  databaseURL: "https://dakotacrowder-af109.firebaseio.com",
+  projectId: "dakotacrowder-af109",
+  storageBucket: "dakotacrowder-af109.appspot.com",
+  messagingSenderId: "134597628241"
+}
+firebase.initializeApp(config);
 
 //TODO group styling / smaller components into an all module
 //TODO animation for tab selection
