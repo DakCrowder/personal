@@ -65,15 +65,6 @@ class Destinations extends Component {
               }
             </ul>
           </div>
-          <CardTitle secondary>
-            Power Rankings
-          </CardTitle>
-          <div>
-            <ol>
-              <li>Amsterdam</li>
-              <li>London</li>
-            </ol>
-          </div>
         </div>
       </div>
     );

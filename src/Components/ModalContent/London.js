@@ -87,9 +87,7 @@ class London extends Component {
           On the whole, London was great for a visit - but also maybe just one.  The city has plenty to do, but it never quite wowed me
           in what it had to offer.  It felt like I was in a different place, but not a vastly different culture. It seems weird, but I
           feel I'd be more likely to try and live full time here than visit again.  I don't mean to demean the city and I had a great time,
-          but I'm expecting more from some of my future destinations.  I've also added an (only somewhat) childish POWER RANKINGS on the
-          Destinations tab of the site where I'll be ranking each place from my favorite to least.  This has also been barely proofread and
-          I'm quite tired, so hopefully its ok.
+          but I'm expecting more from some of my future destinations.  This has also been barely proofread and I'm quite tired, so hopefully its ok.
         </p>
       </div>
     )
