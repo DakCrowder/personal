@@ -54,6 +54,12 @@ class Barcelona extends Component {
           be quite different than being an english only speaker.
         </p>
         <Image imageName={'bunkers'} bucket={'barcelona'} caption={'View of the city from atop old anti-aircraft bunkers'}/>
+        <p>
+          Very few people probably care but I've also begun hosting images for the site in "the cloud" so it should be more performant.
+          Basically you should be using less bandwith to view pages, although I haven't migrated older posts yet.  Also
+          made the mobile experience actually usable, although there are still some styling issues.  I'm currently thinking of switching up a
+          large part of the journey after Italy, so I guess we'll see what happens.
+        </p>
       </div>
     )
   }
