@@ -24,8 +24,7 @@ export default class Image extends Component {
 
   getImage() {
     firebase.storage().ref().child(`images/${this.props.bucket}/${this.props.imageName}.jpg`).getDownloadURL().then((url) => {
-      this.state.image = url
-      this.setState(this.state)
+      this.setState({image: url})
     })
   }
 
