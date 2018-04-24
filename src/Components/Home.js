@@ -8,6 +8,8 @@ import bridge from '../assets/images/london/bridge.jpg'
 import canal from '../assets/images/amsterdam/canal.jpg'
 import place from '../assets/images/brussels/place.jpg'
 import tower from '../assets/images/paris/tower.jpg'
+import fountain from '../assets/images/fountain.jpg'
+import church from '../assets/images/church.jpg'
 
 import Departure from './ModalContent/Departure'
 import London from './ModalContent/London'
@@ -15,11 +17,18 @@ import Amsterdam from './ModalContent/Amsterdam'
 import Brussels from './ModalContent/Brussels'
 import Paris from './ModalContent/Paris'
 import Lyon from './ModalContent/Lyon'
+import Barcelona from './ModalContent/Barcelona'
 
 //TODO object holding card metadata/props and an iterator that places them
 //TODO move old photos into firebase storage
 //TODO image loading state
 //TODO better mobile styling in general (mobile header still iffy)
+
+// TODO non static main home page image
+// TODO non static modal header image
+// TODO cardtitle text alignment bad
+// TODO single card alignment on desktop broken
+// TODO mobile captions out of center
 
 class Home extends Component {
 
@@ -34,8 +43,8 @@ class Home extends Component {
     return (
       <div>
         <CardContainer>
-          <Card image={tower} primaryTitle={'Barcelona'} secondaryTitle={'Spain'} modalContent={Lyon} left />
-          <Card image={place} primaryTitle={'Lyon'} secondaryTitle={'France'} modalContent={Lyon} />
+          <Card image={church} primaryTitle={'Barcelona'} secondaryTitle={'Spain'} modalContent={Barcelona} left />
+          <Card image={fountain} primaryTitle={'Lyon'} secondaryTitle={'France'} modalContent={Lyon} />
         </CardContainer>
         <CardContainer>
           <Card image={tower} primaryTitle={'Paris'} secondaryTitle={'France'} modalContent={Paris} left />

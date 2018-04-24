@@ -18,7 +18,6 @@ const cities = {
   'Zagreb':	'5/16',
   'Split': '5/19',
   'Dubrovnik': '?',
-  'Montenegro': '?',
   'Sarajevo':	'?',
   'Budapest': '?',
   'Vienna': '?',
@@ -56,7 +55,7 @@ class Destinations extends Component {
           </div>
           <div>
             <p>
-              Dates and locations very much subject to change.
+              Dates and locations very much subject to change.  Past Venice its really all up in the air.
             </p>
             <ul style={{listStyleType: 'none', padding: 0}}>
               {
