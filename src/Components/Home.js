@@ -10,6 +10,8 @@ import place from '../assets/images/brussels/place.jpg'
 import tower from '../assets/images/paris/tower.jpg'
 import fountain from '../assets/images/fountain.jpg'
 import church from '../assets/images/church.jpg'
+import cliffs from '../assets/images/cliffs.jpg'
+import beach from '../assets/images/beach.jpg'
 
 import Departure from './ModalContent/Departure'
 import London from './ModalContent/London'
@@ -18,6 +20,8 @@ import Brussels from './ModalContent/Brussels'
 import Paris from './ModalContent/Paris'
 import Lyon from './ModalContent/Lyon'
 import Barcelona from './ModalContent/Barcelona'
+import Marseille from './ModalContent/Marseille'
+import Nice from './ModalContent/Nice'
 
 //TODO object holding card metadata/props and an iterator that places them
 //TODO move old photos into firebase storage
@@ -43,6 +47,10 @@ class Home extends Component {
     return (
       <div>
         <CardContainer>
+          <Card image={beach} primaryTitle={'Nice'} secondaryTitle={'France'} modalContent={Nice} left />
+          <Card image={cliffs} primaryTitle={'Marseille'} secondaryTitle={'France'} modalContent={Marseille} />
+        </CardContainer>
+        <CardContainer>
           <Card image={church} primaryTitle={'Barcelona'} secondaryTitle={'Spain'} modalContent={Barcelona} left />
           <Card image={fountain} primaryTitle={'Lyon'} secondaryTitle={'France'} modalContent={Lyon} />
         </CardContainer>
@@ -55,7 +63,7 @@ class Home extends Component {
           <Card image={bridge} primaryTitle={'London'} secondaryTitle={'England'} modalContent={London} blackClose />
         </CardContainer>
         <CardContainer>
-          <Card image={bag} primaryTitle={'Departure'} modalContent={Departure} />
+          <Card image={bag} primaryTitle={'Departure'} modalContent={Departure} left />
         </CardContainer>
       </div>
     )
