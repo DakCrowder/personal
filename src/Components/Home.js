@@ -12,6 +12,9 @@ import fountain from '../assets/images/fountain.jpg'
 import church from '../assets/images/church.jpg'
 import cliffs from '../assets/images/cliffs.jpg'
 import beach from '../assets/images/beach.jpg'
+import manarola from '../assets/images/manarola.jpg'
+import duomo from '../assets/images/duomo.jpg'
+import coliseum from '../assets/images/coliseum_outer.jpg'
 
 import Departure from './ModalContent/Departure'
 import London from './ModalContent/London'
@@ -22,6 +25,9 @@ import Lyon from './ModalContent/Lyon'
 import Barcelona from './ModalContent/Barcelona'
 import Marseille from './ModalContent/Marseille'
 import Nice from './ModalContent/Nice'
+import Cinque from './ModalContent/Cinque'
+import Florence from './ModalContent/Florence'
+import Rome from './ModalContent/Rome'
 
 //TODO object holding card metadata/props and an iterator that places them
 //TODO move old photos into firebase storage
@@ -47,23 +53,28 @@ class Home extends Component {
     return (
       <div>
         <CardContainer>
-          <Card image={beach} primaryTitle={'Nice'} secondaryTitle={'France'} modalContent={Nice} left />
-          <Card image={cliffs} primaryTitle={'Marseille'} secondaryTitle={'France'} modalContent={Marseille} />
+          <Card image={coliseum} primaryTitle={'Rome'} secondaryTitle={'Italy'} modalContent={Rome} left />
+          <Card image={duomo} primaryTitle={'Florence'} secondaryTitle={'Italy'} modalContent={Florence} />
         </CardContainer>
         <CardContainer>
-          <Card image={church} primaryTitle={'Barcelona'} secondaryTitle={'Spain'} modalContent={Barcelona} left />
-          <Card image={fountain} primaryTitle={'Lyon'} secondaryTitle={'France'} modalContent={Lyon} />
+          <Card image={manarola} primaryTitle={'Cinque Terre'} secondaryTitle={'Italy'} modalContent={Cinque} left/>
+          <Card image={beach} primaryTitle={'Nice'} secondaryTitle={'France'} modalContent={Nice} />
         </CardContainer>
         <CardContainer>
-          <Card image={tower} primaryTitle={'Paris'} secondaryTitle={'France'} modalContent={Paris} left />
-          <Card image={place} primaryTitle={'Brussels'} secondaryTitle={'Belgium'} modalContent={Brussels} />
+          <Card image={cliffs} primaryTitle={'Marseille'} secondaryTitle={'France'} modalContent={Marseille} left />
+          <Card image={church} primaryTitle={'Barcelona'} secondaryTitle={'Spain'} modalContent={Barcelona} />
         </CardContainer>
         <CardContainer>
-          <Card image={canal} primaryTitle={'Amsterdam'} secondaryTitle={'Netherlands'} modalContent={Amsterdam} left />
-          <Card image={bridge} primaryTitle={'London'} secondaryTitle={'England'} modalContent={London} blackClose />
+          <Card image={fountain} primaryTitle={'Lyon'} secondaryTitle={'France'} modalContent={Lyon} left />
+          <Card image={tower} primaryTitle={'Paris'} secondaryTitle={'France'} modalContent={Paris} />
         </CardContainer>
         <CardContainer>
-          <Card image={bag} primaryTitle={'Departure'} modalContent={Departure} left />
+          <Card image={place} primaryTitle={'Brussels'} secondaryTitle={'Belgium'} modalContent={Brussels} left />
+          <Card image={canal} primaryTitle={'Amsterdam'} secondaryTitle={'Netherlands'} modalContent={Amsterdam} />
+        </CardContainer>
+        <CardContainer>
+          <Card image={bridge} primaryTitle={'London'} secondaryTitle={'England'} modalContent={London} blackClose left />
+          <Card image={bag} primaryTitle={'Departure'} modalContent={Departure} />
         </CardContainer>
       </div>
     )
