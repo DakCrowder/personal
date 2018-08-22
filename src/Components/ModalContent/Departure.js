@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-import image from '../../assets/images/items_on_bed.jpg'
+import Image from '../Image'
 
 class Departure extends Component {
 
@@ -14,10 +13,7 @@ class Departure extends Component {
           I'm nervously excited waiting for my first flight to depart.  After years of dreaming and only a few weeks planning (I only have two locations
           booked), Europe is on the horizon.
         </p>
-        <img src={image} alt={''} style={{maxWidth: '100%', height: 'auto'}}/>
-        <p style={{width: '100%', textAlign: 'center', fontStyle: 'italic', height: '30px', lineHeight: '30px', padding: '5px', margin: 0}}>
-          Everything I'll be bringing along
-        </p>
+        <Image imageName={'items_on_bed'} bucket={'misc'} caption={'Everything I\'ll be bringing along'}/>
         <p>
           Even after planning out what I'd be packing, I was still shocked at how few items I was able to fit into the bag (and how heavy it is).
           My regular wardrobe has been cut down to a meager ~5 shirts, shorts and the like.  Slim pickings compared to my usual attire, although
