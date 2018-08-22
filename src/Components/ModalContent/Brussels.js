@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-
-import brew from '../../assets/images/brussels/brew.jpg'
-import kegs from '../../assets/images/brussels/kegs.jpg'
-import place2 from '../../assets/images/brussels/place_2.jpg'
-import waffle from '../../assets/images/brussels/waffle.jpg'
+import Image from '../Image'
 
 class Departure extends Component {
 
@@ -22,10 +18,7 @@ class Departure extends Component {
           There are always going to be 'good' and 'bad' areas in cities, but in Brussels it felt like this
           was taken to an extreme.  I don't mean to be overly negative as I still had a great time, but this aspect was very unexpected.
         </p>
-        <img src={place2} alt={''} style={{maxWidth: '100%', height: 'auto'}}/>
-        <p style={{width: '100%', textAlign: 'center', fontStyle: 'italic', height: '30px', lineHeight: '30px', padding: '5px', margin: 0}}>
-          Museum of the City of Brussels, located opposite the Town Hall visible in the header
-        </p>
+        <Image imageName={'place_2'} bucket={'brussels'} caption={'Museum of the City of Brussels, located opposite the Town Hall visible in the header'}/>
         <p>
           The hostel where I stayed was quite amazing, and I'd be fortunate to find more places like it elsewhere.  The building was a
           fairly large old house with a large courtyard out back, and the Owner set out a breakfast each morning which made for a nice
@@ -44,14 +37,8 @@ class Departure extends Component {
           were excellent.  The Kriek specifically was delicious.  In general the Lambic style seems more of a cross between a standard beer and
           wine, with a high gravity, little carbonation, and a dry / sour taste.
         </p>
-        <img src={brew} alt={''} style={{maxWidth: '100%', height: 'auto'}}/>
-        <p style={{width: '100%', textAlign: 'center', fontStyle: 'italic', height: '30px', lineHeight: '30px', padding: '5px', margin: 0, paddingBottom: '20px'}}>
-          Some brewing equipment from the brewery
-        </p>
-        <img src={kegs} alt={''} style={{maxWidth: '100%', height: 'auto'}}/>
-        <p style={{width: '100%', textAlign: 'center', fontStyle: 'italic', height: '30px', lineHeight: '30px', padding: '5px', margin: 0}}>
-          Where the beer is stored in wooden barrels
-        </p>
+        <Image imageName={'brew'} bucket={'brussels'} caption={'Some brewing equipment from the brewery'}/>
+        <Image imageName={'kegs'} bucket={'brussels'} caption={'Where the beer is stored in wooden barrels'}/>
         <p>
           A 4 hour beer tour winding through 6 bars in the central area was also a really fun experience, where I tried a variety of Belgian beers
           and styles.  Chocolates I ate were also delicious, although the chocolate truffle claiming to have won some award for being the
@@ -61,10 +48,7 @@ class Departure extends Component {
           Although the 'local' move is apparently to eat the waffle without any toppings, I feel justified in saying this is a case when
           the locals are dead wrong.
         </p>
-        <img src={waffle} alt={''} style={{maxWidth: '100%', height: 'auto'}}/>
-        <p style={{width: '100%', textAlign: 'center', fontStyle: 'italic', height: '30px', lineHeight: '30px', padding: '5px', margin: 0}}>
-          GOAT waffle
-        </p>
+        <Image imageName={'waffle'} bucket={'brussels'} caption={'GOAT waffle'}/>
       </div>
     )
   }

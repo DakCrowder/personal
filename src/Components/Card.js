@@ -5,16 +5,18 @@ import { CardContent } from './CardContent';
 import CardTitle from './CardTitle';
 import CardModal from './CardModal'
 import CardContentContainer from './CardContentContainer'
+import * as firebase from 'firebase';
 
 class Card extends Component {
 
   static propTypes = {
-    image: PropTypes.string.isRequired,
     primaryTitle: PropTypes.string.isRequired,
     secondaryTitle: PropTypes.string.isRequired,
     modalContent: PropTypes.node.isRequired,
     blackClose: PropTypes.bool,
     left: PropTypes.bool,
+    bucket: PropTypes.string.isRequired,
+    imageName: PropTypes.string.isRequired
   }
 
   static defaultProps = {
@@ -26,7 +28,18 @@ class Card extends Component {
     super(props);
     this.state = {
       showModal: false,
+      image: '',
     };
+  }
+
+  componentWillMount() {
+    this.getImage()
+  }
+
+  getImage() {
+    firebase.storage().ref().child(`images/${this.props.bucket}/${this.props.imageName}.jpg`).getDownloadURL().then((url) => {
+      this.setState({image: url})
+    })
   }
 
   handleModalOpen = () => {
@@ -41,14 +54,14 @@ class Card extends Component {
     return (
       <div className={this.props.className}>
         <CardContentContainer left={this.props.left}>
-          <CardContent img={this.props.image} onClick={this.handleModalOpen}>
+          <CardContent img={this.state.image} onClick={this.handleModalOpen}>
             {this.props.primaryTitle ? <CardTitle primary>{this.props.primaryTitle}</CardTitle> : null}
             {this.props.secondaryTitle ? <CardTitle secondary>{this.props.secondaryTitle}</CardTitle> : null}
           </CardContent>
         </CardContentContainer>
         <CardModal
           isOpen={this.state.showModal}
-          image={this.props.image}
+          image={this.state.image}
           modalClose={this.handleModalClose}
           primaryTitle={this.props.primaryTitle ? this.props.primaryTitle : null}
           secondaryTitle={this.props.secondaryTitle ? this.props.secondaryTitle : null}
