@@ -16,6 +16,7 @@ import manarola from '../assets/images/manarola.jpg'
 import duomo from '../assets/images/duomo.jpg'
 import coliseum from '../assets/images/coliseum_outer.jpg'
 import canal_grande from '../assets/images/canal_2.jpg'
+import mostar_bridge from '../assets/images/bridge.jpg'
 
 import Departure from './ModalContent/Departure'
 import London from './ModalContent/London'
@@ -30,6 +31,7 @@ import Cinque from './ModalContent/Cinque'
 import Florence from './ModalContent/Florence'
 import Rome from './ModalContent/Rome'
 import Venice from './ModalContent/Venice'
+import Mostar from './ModalContent/Mostar'
 
 //TODO object holding card metadata/props and an iterator that places them
 //TODO move old photos into firebase storage
@@ -55,31 +57,32 @@ class Home extends Component {
     return (
       <div>
         <CardContainer>
-          <Card image={canal_grande} primaryTitle={'Venice'} secondaryTitle={'Italy'} modalContent={Venice} left />
-          <Card image={coliseum} primaryTitle={'Rome'} secondaryTitle={'Italy'} modalContent={Rome} />
+          <Card image={mostar_bridge} primaryTitle={'Mostar'} secondaryTitle={'Bosnia'} modalContent={Mostar} left />
+          <Card image={canal_grande} primaryTitle={'Venice'} secondaryTitle={'Italy'} modalContent={Venice} />
         </CardContainer>
         <CardContainer>
-          <Card image={duomo} primaryTitle={'Florence'} secondaryTitle={'Italy'} modalContent={Florence} left />
-          <Card image={manarola} primaryTitle={'Cinque Terre'} secondaryTitle={'Italy'} modalContent={Cinque} />
+          <Card image={coliseum} primaryTitle={'Rome'} secondaryTitle={'Italy'} modalContent={Rome} left />
+          <Card image={duomo} primaryTitle={'Florence'} secondaryTitle={'Italy'} modalContent={Florence} />
         </CardContainer>
         <CardContainer>
-          <Card image={beach} primaryTitle={'Nice'} secondaryTitle={'France'} modalContent={Nice} left />
-          <Card image={cliffs} primaryTitle={'Marseille'} secondaryTitle={'France'} modalContent={Marseille} />
+          <Card image={manarola} primaryTitle={'Cinque Terre'} secondaryTitle={'Italy'} modalContent={Cinque} left />
+          <Card image={beach} primaryTitle={'Nice'} secondaryTitle={'France'} modalContent={Nice} />
         </CardContainer>
         <CardContainer>
-          <Card image={church} primaryTitle={'Barcelona'} secondaryTitle={'Spain'} modalContent={Barcelona} left/>
-          <Card image={fountain} primaryTitle={'Lyon'} secondaryTitle={'France'} modalContent={Lyon} />
+          <Card image={cliffs} primaryTitle={'Marseille'} secondaryTitle={'France'} modalContent={Marseille} left />
+          <Card image={church} primaryTitle={'Barcelona'} secondaryTitle={'Spain'} modalContent={Barcelona} />
         </CardContainer>
         <CardContainer>
-          <Card image={tower} primaryTitle={'Paris'} secondaryTitle={'France'} modalContent={Paris} left />
-          <Card image={place} primaryTitle={'Brussels'} secondaryTitle={'Belgium'} modalContent={Brussels} />
+          <Card image={fountain} primaryTitle={'Lyon'} secondaryTitle={'France'} modalContent={Lyon} left />
+          <Card image={tower} primaryTitle={'Paris'} secondaryTitle={'France'} modalContent={Paris} />
         </CardContainer>
         <CardContainer>
-          <Card image={canal} primaryTitle={'Amsterdam'} secondaryTitle={'Netherlands'} modalContent={Amsterdam} left/>
-          <Card image={bridge} primaryTitle={'London'} secondaryTitle={'England'} modalContent={London} blackClose />
+          <Card image={place} primaryTitle={'Brussels'} secondaryTitle={'Belgium'} modalContent={Brussels} left />
+          <Card image={canal} primaryTitle={'Amsterdam'} secondaryTitle={'Netherlands'} modalContent={Amsterdam} />
         </CardContainer>
         <CardContainer>
-          <Card image={bag} primaryTitle={'Departure'} modalContent={Departure} left />
+          <Card image={bridge} primaryTitle={'London'} secondaryTitle={'England'} modalContent={London} blackClose left />
+          <Card image={bag} primaryTitle={'Departure'} modalContent={Departure} />
         </CardContainer>
       </div>
     )
