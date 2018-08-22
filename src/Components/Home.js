@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { CardContainer } from './CardContainer';
+import CardContainer from './CardContainer';
 import Card from './Card';
 
 import Departure from './ModalContent/Departure'
@@ -38,8 +38,8 @@ class Home extends Component {
           <Card primaryTitle={'Florence'} secondaryTitle={'Italy'} modalContent={Florence} bucket={'florence'} imageName={'duomo'} />
         </CardContainer>
         <CardContainer>
-          <Card primaryTitle={'Cinque Terre'} secondaryTitle={'Italy'} modalContent={Cinque} bucket={'cinque'} imageName={'manarola'} left />
-          <Card primaryTitle={'Nice'} secondaryTitle={'France'} modalContent={Nice} bucket={'nice'} imageName={'beach'} />
+            <Card primaryTitle={'Cinque Terre'} secondaryTitle={'Italy'} modalContent={Cinque} bucket={'cinque'} imageName={'manarola'} left />
+            <Card primaryTitle={'Nice'} secondaryTitle={'France'} modalContent={Nice} bucket={'nice'} imageName={'beach'} />
         </CardContainer>
         <CardContainer>
           <Card primaryTitle={'Marseille'} secondaryTitle={'France'} modalContent={Marseille} bucket={'marseille'} imageName={'cliffs'} left />

@@ -17,7 +17,7 @@ class CloseIcon extends Component {
 
   render() {
     return (
-      <img className={this.props.className} src={this.props.blackClose ? xCircleBlackSvg : xCircleWhiteSvg} onClick={this.props.onClick}/>
+      <img className={this.props.className} src={this.props.blackClose ? xCircleBlackSvg : xCircleWhiteSvg} onClick={this.props.onClick} alt={'close'}/>
     )
   }
 }

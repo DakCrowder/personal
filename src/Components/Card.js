@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
-import { CardContent } from './CardContent';
+import CardContent from './CardContent';
 import CardTitle from './CardTitle';
 import CardModal from './CardModal'
 import CardContentContainer from './CardContentContainer'
@@ -53,8 +53,8 @@ class Card extends Component {
   render() {
     return (
       <div className={this.props.className}>
-        <CardContentContainer left={this.props.left}>
-          <CardContent img={this.state.image} onClick={this.handleModalOpen}>
+        <CardContentContainer left={this.props.left} onClick={this.handleModalOpen}>
+          <CardContent img={this.state.image}>
             {this.props.primaryTitle ? <CardTitle primary>{this.props.primaryTitle}</CardTitle> : null}
             {this.props.secondaryTitle ? <CardTitle secondary>{this.props.secondaryTitle}</CardTitle> : null}
           </CardContent>

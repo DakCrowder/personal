@@ -1,12 +1,39 @@
 import styled from 'styled-components';
+import React, { Component } from 'react';
+import LazyLoad from 'react-lazyload';
+import { Spinner } from './Spinner';
 
-export const CardContent = styled.div`
+class CardContent extends Component {
+
+  renderSpinner() {
+    if (this.props.img === '') {
+      return (
+        <Spinner/>
+      )
+    }
+  }
+
+  render() {
+    return(
+      <div className={this.props.className} >
+        <LazyLoad height={200} once>
+          {this.props.children}
+        </LazyLoad>
+        {this.renderSpinner()}
+      </div>
+    )
+  }
+}
+
+//`url(${props.img})`
+//background-image: ${props => `linear-gradient(white, ${props.theme.secondary})`};
+export default styled(CardContent)`
   padding: 40px;
-  height: 100%;
-  
-  background-image: ${props => `url(${props.img})`};
+  height: calc(100% - 80px);
   background-size: cover;
+  background-image: ${props => `url(${props.img})`};
   background-position: center;
+  background-color: lightgray;
   
   &:hover {
     opacity: 0.7;

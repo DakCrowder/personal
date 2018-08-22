@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Image from '../Image'
 
-class Venice extends Component {
+class Mostar extends Component {
 
   render() {
     return (
@@ -96,4 +96,4 @@ class Venice extends Component {
   }
 }
 
-export default Venice
+export default Mostar
