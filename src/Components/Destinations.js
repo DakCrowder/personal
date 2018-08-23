@@ -30,12 +30,11 @@ const cities = {
   'Ios': '6/23',
   'Athens': '6/25',
   'Tokyo': '6/28',
-  'Hakone': 'TBD',
-  'Kyoto': 'TBD',
-  'Hiroshima': 'TBD',
-  'Fukuoka': 'TBD',
-  'Osaka': 'TBD',
-  'Tokyo 2': 'TBD',
+  'Hakone': '7/1',
+  'Kyoto': '7/2',
+  'Osaka': '7/5',
+  'Hiroshima': '7/9',
+  'Tokyo 2': '7/11',
   'Hawaii': '7/14',
 }
 
@@ -58,9 +57,6 @@ class Destinations extends Component {
             </CardTitle>
           </div>
           <div>
-            <p>
-              This might finally be correct.
-            </p>
             <ul style={{listStyleType: 'none', padding: 0}}>
               {
                 Object.keys(cities).map(key => {
