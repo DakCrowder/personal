@@ -32,7 +32,9 @@ const theme = {
   primary: '#22ABC7',
   secondary: '#f890e7',
   black: '#000000',
-  white: '#FFFFFF'
+  white: '#FFFFFF',
+  red: '#f12711',
+  orange: '#f5af19'
 };
 
 class App extends Component {

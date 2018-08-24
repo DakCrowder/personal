@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React, { Component } from 'react';
 import { HeroText } from './HeroText'
+import { HeroSecondaryText } from './HeroSecondaryText'
 import { HeroTextContainer } from './HeroTextContainer'
 
 class Hero extends Component {
@@ -10,11 +11,16 @@ class Hero extends Component {
       <div className={this.props.className} >
         <HeroTextContainer>
           <div>
+            <HeroSecondaryText>
+              Hey, I'm
+            </HeroSecondaryText>
+          </div>
+          <div>
             <HeroText>
               Dakota
             </HeroText>
           </div>
-          <div style={{paddingLeft: 40}}>
+          <div>
             <HeroText>
               Crowder
             </HeroText>
