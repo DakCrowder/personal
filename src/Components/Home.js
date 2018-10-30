@@ -7,6 +7,7 @@ import in_logo from '../assets/icons/social/instagram_logo.png'
 import { Slant } from './Slant'
 import { Container } from './Container'
 import FadeText from './FadeText'
+import Blog from'./Blog'
 
 const displayTexts = [
   'Software Developer',
@@ -67,7 +68,8 @@ class Home extends Component {
               smallLeft={'0'}
               smallRight={'0'}
               smallMargin={'auto'}
-              smallWidth={'300px'}>
+              smallWidth={'300px'}
+              shadow>
                 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%'}}>
                   <div style={{padding: '10px', textAlign: 'center', fontSize: '50px'}} >
                     <FadeText text={this.state.displayText}/>
@@ -86,7 +88,8 @@ class Home extends Component {
               smallLeft={'0'}
               smallRight={'0'}
               smallMargin={'auto'}
-              smallWidth={'300px'}>
+              smallWidth={'300px'}
+              shadow>
               <h1 style={{padding: '20px', margin: 0}}>Socials</h1>
               <hr style={{margin: 0}}/>
               <div style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', padding: '20px 0', height: '80px'}}>
@@ -103,6 +106,9 @@ class Home extends Component {
             </Container>
           </Container>
         </Container>
+        <h1 style={{textAlign: 'center'}}>Latest Blog Posts</h1>
+        <Blog limit={4} />
+        <span>TODO link to full blog</span>
       </div>
     )
   }

@@ -59,7 +59,7 @@ class Blog extends Component {
   renderCards() {
     let cards = cardData
     if (this.props.limit) {
-      cards.slice(0, this.props.limit)
+      cards = cards.slice(0, this.props.limit)
     }
 
     return cards.map((card, index) => {

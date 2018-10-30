@@ -27,7 +27,7 @@ export const Container = styled.div`
   
   background-color: ${props => props.backgroundColor ? props.backgroundColor : ''};
   
-  box-shadow: 0 8px 18px 0 rgba(0,0,0,0.2);
+  box-shadow: ${props => props.shadow ? '0 8px 18px 0 rgba(0,0,0,0.2)' : ''};
   
   @media (max-width: 1024px) {
     ${props => getStyles(props, 'medium')}
