@@ -12,7 +12,8 @@ const displayTexts = [
   'Software Developer',
   'Sports Fanatic',
   'Video Game Enthusiast',
-  'Advocate for Delicious Food'
+  'Advocate for Delicious Food',
+  'Expert Drinker of Beer'
 ]
 
 class Home extends Component {

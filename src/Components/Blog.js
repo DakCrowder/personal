@@ -18,6 +18,23 @@ import Rome from './ModalContent/Rome'
 import Venice from './ModalContent/Venice'
 import Mostar from './ModalContent/Mostar'
 
+const cardData = [
+  {primaryTitle: 'Mostar', secondaryTitle: 'Bosnia', modalContent: Mostar, bucket: 'mostar', imageName: 'bridge'},
+  {primaryTitle: 'Venice', secondaryTitle: 'Italy', modalContent: Venice, bucket: 'venice', imageName: 'canal_2'},
+  {primaryTitle: 'Rome', secondaryTitle: 'Italy', modalContent: Rome, bucket: 'rome', imageName: 'coliseum_outer'},
+  {primaryTitle: 'Florence', secondaryTitle: 'Italy', modalContent: Florence, bucket: 'florence', imageName: 'duomo'},
+  {primaryTitle: 'Cinque Terre', secondaryTitle: 'Italy', modalContent: Cinque, bucket: 'cinque', imageName: 'manarola'},
+  {primaryTitle: 'Nice', secondaryTitle: 'France', modalContent: Nice, bucket: 'nice', imageName: 'beach'},
+  {primaryTitle: 'Marseille', secondaryTitle: 'France', modalContent: Marseille, bucket: 'marseille', imageName: 'cliffs'},
+  {primaryTitle: 'Barcelona', secondaryTitle: 'Spain', modalContent: Barcelona, bucket: 'barcelona', imageName: 'church'},
+  {primaryTitle: 'Lyon', secondaryTitle: 'France', modalContent: Marseille, bucket: 'lyon', imageName: 'fountain'},
+  {primaryTitle: 'Paris', secondaryTitle: 'France', modalContent: Paris, bucket: 'paris', imageName: 'tower'},
+  {primaryTitle: 'Brussels', secondaryTitle: 'Belgium', modalContent: Brussels, bucket: 'brussels', imageName: 'place'},
+  {primaryTitle: 'Amsterdam', secondaryTitle: 'Netherlands', modalContent: Amsterdam, bucket: 'amsterdam', imageName: 'canal'},
+  {primaryTitle: 'London', secondaryTitle: 'England', modalContent: London, bucket: 'london', imageName: 'bridge'},
+  {primaryTitle: 'Departure', modalContent: Departure, bucket: 'misc', imageName: 'bag_on_floor'}
+]
+
 class Blog extends Component {
 
   componentWillMount() {
@@ -27,37 +44,40 @@ class Blog extends Component {
     }
   }
 
+  cardObjToComponent(card, left) {
+    return (
+      <Card primaryTitle={card.primaryTitle}
+            secondaryTitle={card.secondaryTitle}
+            modalContent={card.modalContent}
+            bucket={card.bucket}
+            imageName={card.imageName}
+            left={left}
+      />
+    )
+  }
+
+  renderCards() {
+    let cards = cardData
+    if (this.props.limit) {
+      cards.slice(0, this.props.limit)
+    }
+
+    return cards.map((card, index) => {
+      if ((index % 2) === 0) {
+        return (
+          <CardContainer>
+            {this.cardObjToComponent(card, true)}
+            {cards[index+1] && this.cardObjToComponent(cards[index+1], false)}
+          </CardContainer>
+        )
+      }
+    })
+  }
+
   render() {
     return (
       <Body>
-        <CardContainer>
-          <Card primaryTitle={'Mostar'} secondaryTitle={'Bosnia'} modalContent={Mostar} bucket={'mostar'} imageName={'bridge'} left />
-          <Card primaryTitle={'Venice'} secondaryTitle={'Italy'} modalContent={Venice} bucket={'venice'} imageName={'canal_2'} />
-        </CardContainer>
-        <CardContainer>
-          <Card primaryTitle={'Rome'} secondaryTitle={'Italy'} modalContent={Rome} bucket={'rome'} imageName={'coliseum_outer'} left />
-          <Card primaryTitle={'Florence'} secondaryTitle={'Italy'} modalContent={Florence} bucket={'florence'} imageName={'duomo'} />
-        </CardContainer>
-        <CardContainer>
-          <Card primaryTitle={'Cinque Terre'} secondaryTitle={'Italy'} modalContent={Cinque} bucket={'cinque'} imageName={'manarola'} left />
-          <Card primaryTitle={'Nice'} secondaryTitle={'France'} modalContent={Nice} bucket={'nice'} imageName={'beach'} />
-        </CardContainer>
-        <CardContainer>
-          <Card primaryTitle={'Marseille'} secondaryTitle={'France'} modalContent={Marseille} bucket={'marseille'} imageName={'cliffs'} left />
-          <Card primaryTitle={'Barcelona'} secondaryTitle={'Spain'} modalContent={Barcelona} bucket={'barcelona'} imageName={'church'} />
-        </CardContainer>
-        <CardContainer>
-          <Card primaryTitle={'Lyon'} secondaryTitle={'France'} modalContent={Lyon} bucket={'lyon'} imageName={'fountain'} left />
-          <Card primaryTitle={'Paris'} secondaryTitle={'France'} modalContent={Paris} bucket={'paris'} imageName={'tower'} />
-        </CardContainer>
-        <CardContainer>
-          <Card primaryTitle={'Brussels'} secondaryTitle={'Belgium'} modalContent={Brussels} bucket={'brussels'} imageName={'place'} left />
-          <Card primaryTitle={'Amsterdam'} secondaryTitle={'Netherlands'} modalContent={Amsterdam} bucket={'amsterdam'} imageName={'canal'} />
-        </CardContainer>
-        <CardContainer>
-          <Card primaryTitle={'London'} secondaryTitle={'England'} modalContent={London} blackClose bucket={'london'} imageName={'bridge'} left />
-          <Card primaryTitle={'Departure'} modalContent={Departure} bucket={'misc'} imageName={'bag_on_floor'} />
-        </CardContainer>
+      {this.renderCards()}
       </Body>
     )
   }
