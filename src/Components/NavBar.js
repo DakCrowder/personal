@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const NavBar = styled.section`
   padding: 10px 0;
-  background-color: ${props => props.theme.primary};
+  background-color: ${props => props.theme.black};
   display: flex;
   justify-content: center;
   align-items: center;

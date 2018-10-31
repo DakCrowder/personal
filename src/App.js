@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Body } from './Components/Body'
 import { Title } from './Components/Title'
 import { Header } from './Components/Header'
 import { NavBar } from './Components/NavBar'
 import { NavItem } from './Components/NavItem'
 import Home from './Components/Home'
-import Destinations from './Components/Destinations'
+import Blog from './Components/Blog'
 import About from './Components/About'
 import Page from './Components/Page'
 import { ThemeProvider } from 'styled-components';
@@ -28,10 +27,14 @@ firebase.initializeApp(config);
 //TODO animation for tab selection
 //TODO animation for card click
 
-//TODO color themes for flags of each nation (THEMES directory ???)
+//TODO move this somewhere else
 const theme = {
   primary: '#22ABC7',
-  secondary: '#f890e7'
+  secondary: '#f890e7',
+  black: '#000000',
+  white: '#FFFFFF',
+  red: '#f12711',
+  orange: '#f5af19'
 };
 
 class App extends Component {
@@ -46,40 +49,35 @@ class App extends Component {
   }
 
   homeSelected = () => this.state.currentTab === 'home'
-  destinationsSelected = () => this.state.currentTab === 'dest'
+  blogSelected = () => this.state.currentTab === 'blog'
   aboutSelected = () => this.state.currentTab === 'about'
 
   render() {
     return (
       <ThemeProvider theme={theme}>
         <div className="App">
-          <Header>
-            <Title>dakota crowder</Title>
-          </Header>
           <Sticky enabled={true} innerZ={10}>
             <NavBar>
               <NavItem selected={this.homeSelected()} onClick={() => this.handleNavClick('home')}>
                 Home
               </NavItem>
-              <NavItem selected={this.destinationsSelected()} onClick={() => this.handleNavClick('dest')}>
-                Destinations
+              <NavItem selected={this.blogSelected()} onClick={() => this.handleNavClick('blog')}>
+                Blog
               </NavItem>
               <NavItem selected={this.aboutSelected()} onClick={() => this.handleNavClick('about')}>
                 About
               </NavItem>
             </NavBar>
           </Sticky>
-          <Body>
-            <Page visible={this.homeSelected()}>
-              <Home/>
-            </Page>
-            <Page visible={this.destinationsSelected()}>
-              <Destinations/>
-            </Page>
-            <Page visible={this.aboutSelected()}>
-              <About/>
-            </Page>
-          </Body>
+          <Page visible={this.homeSelected()}>
+            <Home navigateToBlog={() => this.handleNavClick('blog')}/>
+          </Page>
+          <Page visible={this.blogSelected()}>
+            <Blog/>
+          </Page>
+          <Page visible={this.aboutSelected()}>
+            <About/>
+          </Page>
         </div>
       </ThemeProvider>
     );
