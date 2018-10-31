@@ -9,6 +9,7 @@ import { Container } from './Container'
 import Blog from'./Blog'
 import FlatButton from './FlatButton'
 import RotatingText from './RotatingText'
+import Link from './Link'
 
 class Home extends Component {
 
@@ -44,7 +45,7 @@ class Home extends Component {
               <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%'}}>
                 <div style={{padding: '10px', textAlign: 'center', fontSize: '30px'}} >
                   I'm currently looking for work! -
-                  <a style={{color: '#22ABC7'}} href={'https://www.linkedin.com/in/dakotacrowder'} target="_blank"> Contact Me!</a>
+                  <Link href={'https://www.linkedin.com/in/dakotacrowder'}> Contact Me!</Link>
                 </div>
               </div>
             </Container>
