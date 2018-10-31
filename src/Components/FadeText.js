@@ -11,33 +11,33 @@ class FadeText extends Component {
 
   render() {
     return (
-      <div className={this.props.className}>
+      <span className={this.props.className}>
         <CSSTransitionGroup
-          transitionName="example"
+          transitionName="fade-text"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={500}>
           <span key={this.props.text}>{this.props.text}</span>
         </CSSTransitionGroup>
-      </div>
+      </span>
     )
   }
 }
 
 export default styled(FadeText)`
-  .example-enter {
+  .fade-text-enter {
     opacity: 0.01;
   }
   
-  .example-enter.example-enter-active {
+  .fade-text-enter.fade-text-enter-active {
     opacity: 1;
     transition: opacity 500ms ease-in;
   }
   
-  .example-leave {
+  .fade-text-leave {
     display: none;
   }
   
-  .example-leave.example-leave-active {
+  .fade-text-leave.fade-text-leave-active {
     opacity: 0.01;
     transition: opacity 500ms ease-in;
   }

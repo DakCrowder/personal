@@ -70,7 +70,7 @@ class App extends Component {
             </NavBar>
           </Sticky>
           <Page visible={this.homeSelected()}>
-            <Home/>
+            <Home navigateToBlog={() => this.handleNavClick('blog')}/>
           </Page>
           <Page visible={this.blogSelected()}>
             <Blog/>

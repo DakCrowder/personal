@@ -25,8 +25,6 @@ class CardContent extends Component {
   }
 }
 
-//`url(${props.img})`
-//background-image: ${props => `linear-gradient(white, ${props.theme.secondary})`};
 export default styled(CardContent)`
   padding: 40px;
   height: calc(100% - 80px);
