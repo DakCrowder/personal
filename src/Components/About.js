@@ -21,9 +21,7 @@ class About extends Component {
             Hi!  My name is Dakota Crowder and I'm a Software Developer from North Carolina.  I attended the
             University of North Carolina at Chapel Hill (GO HEELS!) then worked at ReverbNation for a couple years.
             I travelled around the world and wrote about it on this site, and I'm eagerly awaiting my next trip.
-            Most importantly I'm also currently seeking employment, so check out my
-            <Link href={'https://www.linkedin.com/in/dakotacrowder'}> Linkedin </Link>
-            and drop me a line.
+            I've been working at Transloc since January of 2019, and enjoying it so far.
           </p>
           <p>
             In my free time I play way too much League of Legends, watch way too much Football, and occasionally
@@ -32,7 +30,6 @@ class About extends Component {
           <h2 style={{paddingTop: '40px'}}>About The Site</h2>
           <p>
             This site is a static React app sitting in a Firebase bucket.  Images are hosted in firebase storage as well.
-            The code is uploaded to a github repository <Link href={'https://github.com/DakCrowder/personal'}>here</Link>.
             This is currently version 2.0, its still rough around the edges but (mostly) gets the job done.  If you notice
             any issues feel free to <s>flame</s> notify me about it!
           </p>

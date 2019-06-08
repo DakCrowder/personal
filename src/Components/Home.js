@@ -44,8 +44,8 @@ class Home extends Component {
               shadow>
               <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%'}}>
                 <div style={{padding: '10px', textAlign: 'center', fontSize: '30px'}} >
-                  I'm currently looking for work! -
-                  <Link href={'https://www.linkedin.com/in/dakotacrowder'}> Contact Me!</Link>
+                  I'm a Software Engineer <br />
+                  @ <Link href={'https://transloc.com/'}> Transloc</Link>!
                 </div>
               </div>
             </Container>
